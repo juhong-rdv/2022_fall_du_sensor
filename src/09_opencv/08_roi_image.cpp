@@ -12,8 +12,9 @@ int main(void)
 	roi.width = 125 ;
 	roi.height = 100 ;
 	
-	cv::Mat roi_image = image(roi) ;
-	 
+	cv::Mat roi_image ;
+	image(roi).copyTo(roi_image) ;
+	
 	cv::imshow("test", image) ;
 	cv::imshow("roi", roi_image) ;
 	cv::waitKey(0) ;
